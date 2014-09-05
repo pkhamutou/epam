@@ -1,0 +1,158 @@
+
+body {
+    width: 960px;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+
+#backgr {
+    background-color: #efefef;
+}
+
+
+header{
+    text-align: center;
+    
+}
+
+.liheader {
+    display: inline;
+    padding: 10px;
+}
+
+div.player {
+    background-color: #dddddd;
+    width: 150px;
+    height: 600px;
+    float: left;
+    text-align: left;
+
+}
+
+p.player {
+    padding-left: 10px;
+}
+
+h2.player {
+    text-align: center;
+    
+}
+
+
+#gamefield {
+    width: 900px;
+    height: 600px;
+    margin-left: 30px;
+    margin-right: 30px;
+    border-width: thin;
+    border-style: solid;
+}
+
+#game {
+    width: 600px;
+    height: 600px;
+    float: left;
+    background-color: #000000;
+}
+
+#one {
+    height: 195px;
+    width: 195px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    
+}
+
+#two {
+    height: 195px;
+    width: 200px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#three {
+    height: 195px;
+    width: 195px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+#four {
+    height: 200px;
+    width: 195px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+}
+
+#five {
+    height: 200px;
+    width: 200px;
+    float: left;
+    margin-right: 5px;
+    margin-bottom: 5px;
+    
+ 
+
+}
+
+#six {
+    height: 200px;
+    width: 195px;
+    float: left;
+    margin-bottom: 5px;
+}
+
+#seven {
+    height: 195px;
+    width: 195px;
+    float: left;
+    margin-right: 5px;
+}
+
+#eight {
+    height: 195px;
+    width: 200px;
+    float: left;
+    margin-right: 5px;
+}
+
+#nine {
+    height: 195px;
+    width: 195px;
+    float: left;
+}
+
+#line1 {
+    
+}
+
+#line2 {
+    position: absolute;
+    left: 400px;
+}
+
+#line3 {
+    position: absolute;
+    top: 195px;
+}
+
+#line4 {
+    position: absolute;
+    top: 400px;
+}
+
+.square {
+    background-color: #ffffff;
+}
+
+
+
+#reser {
+    padding: 5px;
+    margin: 5px;
+}
