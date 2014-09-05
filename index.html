@@ -1,1 +1,136 @@
-again
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Tic-tac-toe</title>
+        <link rel="stylesheet" type="text/css" href="Tic-tac-toe.css" />
+
+        <script type="text/javascript">
+            var isBot;
+            function startHere(){
+                if(document.getElementById("hvh").checked){
+                    isBot = false;
+                    removeObjects();
+                    getNames();
+                }
+                else if(document.getElementById("hvb").checked){
+                    isBot = true;
+                    removeObjects();
+                    getNamesBot();
+                }
+            }
+            
+            function removeObjects(){
+                if(document.getElementById("hvh").checked && typeof gameBot != "undefined"){
+                    gameBot.clearArea();
+                    delete gameBot;
+                    console.log("Deleted gameBot!");
+                }
+                else if(document.getElementById("hvb").checked && typeof game != "undefined"){
+                    game.clearArea();
+                    delete game;
+                    console.log("Deleted game!");
+                }
+            }
+            
+        </script>
+        
+        
+        <script type="text/javascript" src="Tic-tac-toe.js"></script>
+        <script type="text/javascript" src="bot.js"></script>
+        
+        
+      
+    </head>
+    
+    <body>
+        <div id="backgr">
+            <header>
+                <h1>Tic-tac-toe!</h1>
+                <nav>
+                    <ul>
+                        <input type="radio" name="Option" id="hvh" value="Human vs. Human" onclick="startHere();"/> 
+                            Human vs. Human
+                        <input type="radio" name="Option" id="hvb" value="Human vs. Bot" onclick="startHere();"/>
+                            Human vs. Bot
+                    </ul>
+
+                </nav>
+            </header>
+
+            <div id="reser"> 
+                <button id="reserButton" onclick="reset();">Reset Field</button> 
+                <button id="switchButton" onclick="switchPlayers();">Switch</button>
+                <button id="resetScore" onclick="resetScore();">Reset Score</button>
+            </div>
+            <div id="gamefield">
+                <div class="player">
+                    <h2 class="player">Player 1 (Crosses)</h2> <hr />
+                    <p class="player">Name: <span id="player1Name"></span></p>
+                    <p class="player">Score: <span id="p1score"></span> </p>
+                </div>
+
+
+                <div id="game">
+
+                    <div class="square" id="one" onclick="checkOrder('one');">
+                        <canvas id="can1" width="190" height="190"></canvas>
+                    </div> <!-- 1 -->
+                    <div class="square" id="two" onclick="checkOrder('two');">
+                        <canvas id="can2" width="190" height="190"></canvas>
+                    </div> <!-- 2 -->
+                    <div class="square" id="three" onclick="checkOrder('three');">
+                        <canvas id="can3" width="190" height="190"></canvas>
+                    </div> <!-- 3 -->
+                    <div class="square" id="four" onclick="checkOrder('four');">
+                        <canvas id="can4" width="190" height="190"></canvas>
+                    </div> <!-- 4 -->
+                    <div class="square" id="five" onclick="checkOrder('five');">
+                        <canvas id="can5" width="190" height="190"></canvas>
+                    </div> <!-- 5 -->
+                    <div class="square" id="six" onclick="checkOrder('six');">
+                        <canvas id="can6" width="190" height="190"></canvas>
+                    </div> <!-- 6 -->
+                    <div class="square" id="seven" onclick="checkOrder('seven');">
+                        <canvas id="can7" width="190" height="190"></canvas>
+                    </div> <!-- 7 -->
+                    <div class="square" id="eight" onclick="checkOrder('eight');">
+                        <canvas id="can8" width="190" height="190"></canvas>
+                    </div> <!-- 8 -->
+                    <div class="square" id="nine" onclick="checkOrder('nine');">
+                        <canvas id="can9" width="190" height="190"></canvas>
+                    </div> <!-- 9 -->
+
+
+
+
+
+                </div>
+
+
+
+                <div class="player">
+                    <h2 class="player">Player 2 (Zeros)</h2> <hr />
+                    <p class="player">Name: <span id="player2Name"></span></p>
+                    <p id="player2Score" class="player">Score: <span id="p2score"></span></p>
+                </div>
+
+
+
+
+
+
+
+            </div>
+
+
+
+
+
+            <footer>&copy; PK.</footer>
+        </div> <!-- backgt -->
+    </body>
+
+
+
+
+</html>
